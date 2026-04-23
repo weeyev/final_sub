@@ -91,11 +91,9 @@ class Model(torch.nn.Module):
             pos_norm = (pos_b - self.pos_mean) / (self.pos_std + 1e-8)
             vel_in_norm = (vel_in_b - self.vel_mean) / (self.vel_std + 1e-8)
 
-            # 3. Build k-NN graphs dynamically
             edge_index = knn_graph(pos_norm, k=16, loop=False)
             edge_index_dense = knn_graph(pos_norm, k=32, loop=False)
 
-            # 4. Forward pass — predict() returns absolute normalized velocity (T_out, N, 3)
             vel_out_norm = self.model.predict(
                 vel_in=vel_in_norm,
                 edge_index=edge_index,
@@ -105,7 +103,6 @@ class Model(torch.nn.Module):
                 edge_index_dense=edge_index_dense,
             )
 
-            # 5. Denormalize and enforce no-slip BC at airfoil surface
             vel_out_raw = vel_out_norm * self.vel_std + self.vel_mean
             vel_out_raw[:, idx_b, :] = 0.0
             outputs.append(vel_out_raw)
