@@ -1,5 +1,6 @@
 from .ensemble_spatiotemporal_models import EnsembleSpatioTemporalModels
 from .mlp import MLP
+from .aero_chrono_mixer import AeroChronoMixer
 from .levers_tail_submission import LeversTailV2Submission
 from .gated_egno import GatedEGNOMeanResModel
 from .submission_model import SubmissionModel
