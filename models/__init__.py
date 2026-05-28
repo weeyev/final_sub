@@ -1,5 +1,6 @@
 from .ensemble_spatiotemporal_models import EnsembleSpatioTemporalModels
 from .mlp import MLP
+from .submission_model import SubmissionModel
 from .harshitsinghsnu import ImprovedMLP
 from .fno_dse_time import FNO_DSE_TIME
 from .airformer import AirFormer
