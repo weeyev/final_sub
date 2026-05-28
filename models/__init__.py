@@ -1,5 +1,6 @@
 from .ensemble_spatiotemporal_models import EnsembleSpatioTemporalModels
 from .mlp import MLP
+from .wavelet_latent_operator import WaveletLatentOperator
 from .cdf_2grid import CDFDoubleGridNet
 from .finite_graph_v4 import FiniteGraphV4
 from .smoothsplatnet import SmoothSplatNet
