@@ -1,5 +1,6 @@
 from .ensemble_spatiotemporal_models import EnsembleSpatioTemporalModels
 from .mlp import MLP
+from .ab_upt import ABUPT
 from .vrt_ensemble import VRTEnsemble
 from .wavelet_latent_operator import WaveletLatentOperator
 from .cdf_2grid import CDFDoubleGridNet
