@@ -7,7 +7,6 @@ from .model import (
     TurbulentExpert,
     GATLayer,
 )
-from .train import train, WeightedMSELoss
 from .preprocessing import (
     AirfoilDataset,
     GeometryCache,
